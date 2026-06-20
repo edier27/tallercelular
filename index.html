@@ -10422,7 +10422,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(React.createElement(
 
   keySave.addEventListener("click", function() {
     var k = keyInput.value.trim();
-    if (!k || !k.startsWith("AIza")) {
+    if (!k || k.length < 10) {
       keyInput.style.borderColor = "#EF4444";
       setTimeout(function(){ keyInput.style.borderColor = ""; }, 1500);
       return;
